@@ -1,8 +1,8 @@
-import { AppBar, styled, Toolbar, Typography, Box, InputBase, Badge, Avatar} from '@mui/material'
+import { AppBar, styled, Toolbar, Typography, Box, InputBase, Badge, Avatar, Menu, MenuItem} from '@mui/material'
 import InterestsIcon from '@mui/icons-material/Interests';
 import MailIcon from '@mui/icons-material/Mail';
 import theme from "../theme";
-import React from 'react';
+import React, { useState } from 'react';
 import { Notifications } from '@mui/icons-material';
 
 
@@ -37,6 +37,8 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -52,13 +54,31 @@ const NavBar = () => {
           <Badge badgeContent={4} color="error">
             <Notifications />
           </Badge>
-          <Avatar sx={{width:30, height:30}} src=""/>
+          <Avatar sx={{width:30, height:30}} src="" onClick={e=>setOpen(true)}/>
         </Icons>
-        <UserBox>
+        <UserBox onClick={e=>setOpen(true)}>
           <Avatar sx={{width:30, height:30}} src=""/>
           <Typography variant="span">UserName</Typography>
         </UserBox>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={e=>setOpen(false)}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem >Profile</MenuItem>
+        <MenuItem >My account</MenuItem>
+        <MenuItem >Logout</MenuItem>
+      </Menu>
     </AppBar>
   )
 }
