@@ -1,4 +1,4 @@
-# Social Media Landing 
+# Social Network Landing 
 ## Social Network Landing created using React and Material UI
 
 ## This Website Includes: 
