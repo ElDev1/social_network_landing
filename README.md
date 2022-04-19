@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 # Social Media Landing 
 ## Social Network Landing created using React and Material UI
 
@@ -11,3 +9,4 @@
 - Responsive Design
 - React Hooks (useState)
 
+![img](https://github.com/ElDev1/social_network_landing/tree/master/public/landing.png)
