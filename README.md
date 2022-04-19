@@ -9,4 +9,4 @@
 - Responsive Design
 - React Hooks (useState)
 
-![img](https://github.com/ElDev1/social_network_landing/tree/master/public/landing.png)
+![img](public/landing.png)
